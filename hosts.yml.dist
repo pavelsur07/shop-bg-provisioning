@@ -9,6 +9,8 @@ all:
                     ansible_port: 22
             vars:
                 db_hostname: worker-db
+                ansible_python_interpreter: /usr/bin/python3
+
         workers:
             hosts:
                 swarm-worker-1:
@@ -16,5 +18,5 @@ all:
                     ansible_user: root
                     ansible_host: 0.0.0.0
                     ansible_port: 22
-#    vars:
-#        ansible_python_interpreter: /usr/bin/python3
+    vars:
+        ansible_python_interpreter: /usr/bin/python3
